@@ -1,6 +1,6 @@
 # Code Smell Detector
 
-## This is a Python appliaction that can detect three types of Code Smells:
+## This is a Python application that can detect three types of Code Smells:
 <ol>
   <li>Long Method</li>
   <li>Long Parameter List</li>
