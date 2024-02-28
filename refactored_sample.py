@@ -27,7 +27,7 @@ def is_failed(student_id, grade):
         'D': 1.0,
         'F': 0.0
     }
-    
+
     A_plus = "A+"
     A = "A"
     A_minus = "A-"
@@ -68,11 +68,13 @@ def is_failed(student_id, grade):
             return f"Student ID: {student_id}, Grade: {grade}, Result: Failed"
         else:
             return f"Student ID: {student_id}, Grade: {grade}, Result: Passed"
-        
+
     return f"Student ID: {student_id}, Grade: {grade}, Result: Invalid Grade"
+
 
 def sample(a, b):
     return a + b
+
 
 def calculate_area(radius):
     """
@@ -82,16 +84,6 @@ def calculate_area(radius):
     area = pi * radius * radius
     return area
 
-def calculate_volume(radius):
-    """
-    Calculate the volume of a sphere given its radius.
-    """
-    pi = 3.14159
-    volume = (4 / 3) * pi * radius * radius * radius
-    return volume
-    
-        
-
 
 if __name__ == "__main__":
     # # Test evaluate_loan method
@@ -100,16 +92,17 @@ if __name__ == "__main__":
     income = 35000
     criminal_record = False
     employed = True
-    loan_status = evaluate_loan(credit_score, age, income, criminal_record, employed)
+    loan_status = evaluate_loan(
+        credit_score, age, income, criminal_record, employed)
     print(loan_status)
-    
+
     # Test is_failed method
     student_id = "123456"
     grade = "B-"
     result = is_failed(student_id, grade)
     print(result)
-    
+
     area = calculate_area(3)
-    volume = calculate_volume(3)
-    
+    volume = calculate_area(3)
+
     print(area, volume)
