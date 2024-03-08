@@ -85,8 +85,45 @@ def calculate_area(radius):
     return area
 
 
+def calculate_volume(radius):
+    """
+    Calculate the volume of a sphere given its radius.
+    """
+    pi = 3.14159
+    volume = (4 / 3) * pi * radius * radius
+    return volume
+
+
+def is_prime(n):
+    if n in [2, 3]:
+        return True
+    if (n == 1) or (n % 2 == 0):
+        return False
+    r = 3
+    while r * r <= n:
+        if n % r == 0:
+            return False
+        r += 2
+    return True
+
+
+def dummy_func1():
+    print("Hello")
+
+
+def dummy_func2():
+    print("Hello")
+
+
+def dummy_func3():
+    print("Hello")
+
+
+def dummy_func4():
+    print("Hello")
+
+
 if __name__ == "__main__":
-    # # Test evaluate_loan method
     credit_score = 700
     age = 30
     income = 35000
@@ -96,13 +133,14 @@ if __name__ == "__main__":
         credit_score, age, income, criminal_record, employed)
     print(loan_status)
 
-    # Test is_failed method
     student_id = "123456"
     grade = "B-"
     result = is_failed(student_id, grade)
     print(result)
 
     area = calculate_area(3)
-    volume = calculate_area(3)
+    volume = calculate_volume(3)
+    prime1 = is_prime(4)
+    prime2 = is_prime(5)
 
     print(area, volume)
