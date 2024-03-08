@@ -7,7 +7,7 @@ import autopep8
 LONG_METHOD_THRESHOLD = 15
 LONG_PARAMETER_THRESHOLD = 3
 DUPLICATED_CODE_THRESHOLD = 0.75
-PROGRESS_BAR_TIME = 5000
+PROGRESS_BAR_TIME = 3000
 POPUP_WINDOW_WIDTH = 650
 POPUP_WINDOW_HEIGHT = 250
 FONT_TUPLE = ("Helvetica", 20)
@@ -25,7 +25,7 @@ class CodeSmellDetectorGUI:
         self.clear_button = tk.Button(root, text="Clear", command=self.clear_text_fields, font=FONT_TUPLE)
         self.refactor_button = tk.Button(root, text="Refactor Duplicated Code", command=self.refactor_button, font=FONT_TUPLE)
 
-        self.progress_bar = ttk.Progressbar(root, orient='horizontal', length=160)
+        self.progress_bar = ttk.Progressbar(root, orient='horizontal', length=160, maximum=60)
         self.progress_bar.place(x=30, y=30)
 
         self.uploaded_file = tk.Text(root, height=1, width=100, bg="light yellow", font=FONT_TUPLE)
