@@ -90,7 +90,7 @@ class CodeSmellDetectorGUI:
 
         refactored_file_path = self.write_refactored_code_to_file(code_content)
 
-        self.refactor_results.insert(tk.END, f"Refactoring Complete. Refactored code written to {refactored_file_path}")
+        self.refactor_results.insert(tk.END, f"Refactoring Complete. Refactored code written to: {refactored_file_path}")
 
     def jaccard_similarity(self, set1, set2):
         intersection = len(set1.intersection(set2))
