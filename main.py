@@ -95,7 +95,7 @@ class CodeSmellDetectorGUI:
     def jaccard_similarity(self, set1, set2):
         intersection = len(set1.intersection(set2))
         union = len(set1.union(set2))
-        return intersection / union if union else 0
+        return intersection / union
 
     def detect_duplicate_functions(self, functions):
         duplicates = []
